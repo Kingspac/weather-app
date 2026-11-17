@@ -1,16 +1,45 @@
-# React + Vite
+# WeatherNow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fast, responsive weather app built with React and Vite. Search any city and get current conditions plus a 5-day forecast, powered by the free Open-Meteo API (no API key needed).
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- City search with geocoding
+- Current temperature, feels-like, humidity and wind
+- 5-day forecast with rain probability
+- Use my location (browser geolocation)
+- Celsius / Fahrenheit toggle, remembered between visits
+- Recent searches saved in localStorage
+- Loading spinner and clear error messages (unknown city, no internet, denied location)
+- Day / night theme and landscape-friendly layout
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+React 19, Vite, Open-Meteo Geocoding and Forecast APIs, CSS3
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+    git clone https://github.com/Kingspac/weather-app.git
+    cd weather-app
+    npm install
+    npm run dev
+
+## Project Structure
+
+    src/
+      App.jsx       UI, state, search and geolocation
+      weather.js    API calls and weather-code descriptions
+      index.css     styles
+
+## Deployment (Render, static site)
+
+- Build command: `npm install && npm run build`
+- Publish directory: `dist`
+
+## Credits
+
+Weather data by [Open-Meteo](https://open-meteo.com/).
+
+## Author
+
+Bulus Kingsley, Full Stack Developer (MERN)
